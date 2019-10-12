@@ -1,0 +1,42 @@
+1. Two dies are rolled at once. Find out the probability for sum of numbers being even and one of the die shows  6.
+
+Ans: 3/6 = 1/2
+
+2.      Two dies are rolled at once. Find out the probability for sum of numbers being less than 7
+Ans: 4/36 = 1/9
+
+3.      You toss a fair coin three times: Given that you have observed at least one heads, what is the probability that you observe at least two heads?
+Ans: 3/7
+
+4.      In my town, it's rainy one third of the days. Given that it is rainy, there will be heavy traffic with probability 1/2, and given that it is not rainy, there will be heavy traffic with probability 1/4. If it's rainy and there is heavy traffic, I arrive late for work with probability 1/2. On the other hand, the probability of being late is  1/8 if it is not rainy and there is no heavy traffic. In other situations (rainy and no traffic, not rainy and traffic) the probability of being late is 0.25, 0.25. You pick a random day.What is the probability that it's not raining and there is heavy traffic and I am not late?
+
+     (a) What is the probability that it's not raining and there is heavy traffic and I am not late?
+     Ans: 1/8
+
+    (b)  What is the probability that I am late?
+    Ans: 11/48
+
+   (c) Given that I arrived late at work, what is the probability that it rained that day?
+   Ans: 6/11
+
+5.      A box contains three coins: two regular coins and one fake two-headed coin (P(Heads)=1), you pick a coin at random and toss it.
+
+   (a)  What is the probability that it lands heads up?
+   Ans: 2/3
+
+  (b)  You pick a coin at random and toss it and get heads. What is the probability that it is the two-headed coin?
+  Ans: 1/2
+
+6.      Suppose that, of all the customers at a coffee shop,
+
+   (a) 70% purchase a cup of coffee
+
+  
+
+   (b)  40% purchase a piece of cake
+
+   6.3. 20% purchase both a cup of coffee and a piece of cake.
+
+Given that a randomly chosen customer has purchased a piece of cake, what is the probability that he/she has also purchased a cup of coffee?-
+
+Ans: 1/2
