@@ -1,0 +1,93 @@
+
+import pandas as pd
+import numpy as np
+
+#2. Given Pandas series , height = [23,42,55] and weight = [71,32,48] . Create a dataframe with height and weight as column names.
+
+df1=pd.DataFrame([[234255,713248]],columns=['height','weight'])
+print(df1.head())
+
+#3. How to get the items of series A not present in series B .From ser1 remove items present in ser2.
+ser1=pd.Series([2,3,4,5])
+ser2=pd.Series([5,6,7,8])
+lst1=ser1.tolist()
+lst2=ser2.tolist()
+ll=np.setdiff1d(lst1,lst2)
+print('series present in A not in B:',ll)
+#print('series present in A not in B:',ser1[~ser2.isin(ser1)])
+
+
+#4.Compute the minimum, 25th percentile, median, 75th, and maximum of age in titanic dataset
+titanic=pd.read_csv("C:\\Users\\Admin\\Desktop\\Syllabus\\titanic.csv")
+print('Min:',titanic['Age'].min())
+print('Max:',titanic['Age'].max())
+print('Median:',titanic['Age'].median)
+print('25th percentile:',titanic['Age'].quantile(.25))
+print('75th percentile:',titanic['Age'].quantile(.75))
+#5. How to get frequency counts of unique items of a series? Calculate the frequency counts of ‘SibSp’ column in titanic Dataset
+print("Frequency Count of Sibsp column:",titanic['SibSp'].value_counts())
+#6. Keep only top 2 most frequent values as it is and replace everything else as ‘Other’ in ‘Embarked’ column of titanic dataset
+ser=titanic['Embarked'].value_counts()
+print("ser1:",ser)
+ser[~ser.isin(ser.value_counts().index[:2])] = 'Other'
+print('ser:',ser)
+#7.  Bin the price column in titanic data set into 5 equal groups and get counts of each bin
+#print(titanic.columns)
+bin=pd.qcut(titanic['Fare'],q=[0,.1,.2,.3,.4,.5],labels=['1st', '2nd', '3rd', '4th', '5th'])
+print(bin.value_counts())
+#8. Count the number of missing values in each column?
+print("Count no.of missing values in each column:",titanic.apply(lambda x:x.isnull().sum()))
+#9. Get the row number of the 5th largest value in the Age column of titanic dataset?
+#print('max:',titanic['Age'].max())
+print(titanic['Age'].sort_values(ascending=False).index[4])
+#10. Normalize all columns in a dataframe?
+df = pd.DataFrame(np.random.randint(1,100, 80).reshape(8, -1))
+normal = df.apply(lambda x: ((x.max() - x)/(x.max() - x.min())).round(2))
+print('Normalised op:', normal)
+#11. Get the indices of items of ser2 in ser1 as a list.p
+ser1 = pd.Series([10, 9, 6, 5, 3, 1, 12, 8, 13])
+ser2 = pd.Series([1, 3, 10, 13])
+indices_of_ser2_in_ser1=[pd.Index(ser1).get_loc(i) for i in ser2]
+print(indices_of_ser2_in_ser1)
+
+#12. How to convert a series of date-strings to a timeseries?
+ser = pd.Series(['01 Jan 2010', '02-02-2011', '20120303', '2013/04/04', '2014-05-05', '2015-06-06T12:20'])
+print("to time series:",pd.to_datetime(ser))
+#13. Get the day of month, week number, day of year and day of week from ser.
+
+ser = pd.Series(['01 Jan 2010', '02-02-2011', '20120303', '2013/04/04', '2014-05-05', '2015-06-06T12:20'])
+from dateutil.parser import parse
+ser_ts = ser.map(lambda x: parse(x))
+# day of month
+print("Date: ", ser_ts.dt.day.tolist())
+
+# week number
+print("Week number: ", ser_ts.dt.weekofyear.tolist())
+
+# day of year
+print("Day number of year: ", ser_ts.dt.dayofyear.tolist())
+
+# day of week
+print("Day of week: ", ser_ts.dt.weekday_name.tolist())
+
+#14. Compute the euclidean distance between series (points) p and q, without using a packaged formula.
+p = pd.Series([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+q = pd.Series([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+print(np.linalg.norm(p-q))
+
+#15. How to create a TimeSeries starting ‘2000-01-01’ and 10 weekends (saturdays/sundays)
+
+ser = pd.Series(np.random.randint(1,10,10), pd.date_range('2000-01-01', periods=10, freq='W-SAT'))
+print(ser)
+#16. Import every 50th row of BostonHousing dataset as a dataframe.
+boston_data=pd.read_csv("C:\\Users\\Admin\\Desktop\\Syllabus\\boston_data.csv",chunksize=50)
+import csv
+with open('C:\\Users\\Admin\\Desktop\\Syllabus\\boston_data.csv', 'r') as f:
+    reader = csv.reader(f)
+    out = []
+    for i, row in enumerate(reader):
+        if i%50 == 0:
+            out.append(row)
+
+df2 = pd.DataFrame(out[1:], columns=out[0])
+print("bostan data:",df2.head())
