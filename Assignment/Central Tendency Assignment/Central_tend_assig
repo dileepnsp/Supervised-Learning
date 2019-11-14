@@ -1,0 +1,131 @@
+1. Find the mean of the following data using hand and compare with numpy.mean()
+(a) 9, 7, 11, 13, 2, 4, 5, 5
+
+Hand: 7
+Numpty:
+import numpy as np
+data=[9, 7, 11, 13, 2, 4, 5, 5]
+print(np.mean(data))
+7.0
+
+(b) 2.2, 10.2, 14.7, 5.9, 4.9, 11.1, 10.5
+Hand: 8.5
+Numpy: data=[2.2, 10.2, 14.7, 5.9, 4.9, 11.1, 10.5]
+print(np.mean(data))
+
+8.5
+
+(c) 11/4, 21/2, 51/2, 31/4, 21/2
+
+Hand:11.4
+Numpy:
+data=[11/4, 21/2, 51/2, 31/4, 21/2]
+print(np.mean(data))
+11.4
+
+
+2) Find the mean of first 10 Fibonacci numbers (Use a for loop to create 10 Fibonacci series)
+
+
+n1, n2 = 0, 1
+count = 0
+fib_lst=[]
+while count < 10:
+      fib_lst.append(n1)
+      nth = n1 + n2
+      # update values
+      n1 = n2
+      n2 = nth
+      count += 1
+
+print(fib_lst)
+print(np.mean(fib_lst))
+
+3) Find the mean and median of first 5 prime numbers.
+prime5=[2,3,5,7,11]
+print("mean of prime5:",np.mean(prime5))
+print("mean of prime5:",np.median(prime5))
+
+4) The mean of 8, 11, 6, 14, x and 13 is 66. Find the value of the observation x.
+8+11+6+14+x+13/6=66
+52 + x /6 = 66
+52 + x = 396
+x= 344
+
+5) The mean of 6, 8, x + 2, 10, 2x - 1, and 2 is 9. Find the value of x and also the value of the observation in the data.
+
+6 + 8 + x + 2 + 10 + 2x - 1 + 2 / 6 = 9
+27 + 3x / 6 = 9
+3x = 9*6 - 27
+3x=27
+x=9
+
+6)  Find the mean of the following distribution.
+
+(a) The age of 20 boys in a locality is given below.
+
+Age in Years 12,10,15,14,8 and Number of boys 5,3,2,6,4?
+
+Ans: 12*5 + 10*3 + 15*2 + 14*6 + 8*4 /20=236/20=11.8
+
+(b) Marks obtained by 40 students in an exam are given below.
+
+Marks 25,30,15,20,24  and Number of Students 8,12,10,6,4
+
+25*8 + 30*12 + 15*10 + 20*6 + 24*4/40 = 
+
+40+360+150+120+96/40 = 19.15
+
+7. Find the mode of the following data.
+
+(a) 12, 8, 4, 8, 1, 8, 9, 11, 9, 10, 12, 8
+
+data=[12, 8, 4, 8, 1, 8, 9, 11, 9, 10, 12, 8]
+print('mode:',sc.mode(data))
+mode: ModeResult(mode=array([8]), count=array([4]))
+
+(b) 15, 22, 17, 19, 22, 17, 29, 24, 17, 15
+
+data=[15, 22, 17, 19, 22, 17, 29, 24, 17, 15]
+print('mode:',sc.mode(data))
+mode: ModeResult(mode=array([17]), count=array([3]))
+
+
+(c) 0, 3, 2, 1, 3, 5, 4, 3, 42, 1, 2, 0
+
+data=[0, 3, 2, 1, 3, 5, 4, 3, 42, 1, 2, 0]
+print('mode:',sc.mode(data))
+mode: ModeResult(mode=array([3]), count=array([3]))
+
+
+(d) 1, 7, 2, 4, 5, 9, 8, 3
+
+data=[1, 7, 2, 4, 5, 9, 8, 3]
+print('mode:',sc.mode(data))
+
+mode: ModeResult(mode=array([1]), count=array([1]))
+
+
+8) The following observations are arranged in ascending order. The median of the data is 25 find the value of x.
+
+17, x, 24, x + 7, 35, 36, 46
+
+Ans: X + 7 = 25
+x = 18
+
+17,18,24,25,35,36,46 -> median = 25 matching.
+
+9) In the above problem, how would you approach the problem if the numbers are not in ascending order ? What are possible values of X then ?
+
+
+10. In which of these situations would you use the mode to measure the central tendency of the data
+Ans: d
+
+(a) Justin records the temperature at noon every day for two weeks and wants to know the temperature of a 'typical' day.
+
+(b) Would you use the mean in all of these situations ?
+
+(c) Juliana measures the height of all the girls on her soccer team and wants to know the typical height of a soccer player.
+
+
+(d) Sam asks the students in her class to identify their favorite colors and wants to know which color is the most common.
