@@ -1,0 +1,110 @@
+2. The average monthly sales of 2,000 firms are normally distributed with mean of Rs. 38,000 and standard deviation
+
+Rs. 10,000. Find:-
+
+(i) The number of firms with sales of over Rs. 50,000
+
+Ans: Mean(mu)=38,000
+	std=10,000
+	z-score of 50,000 = (x-mu)/std = (50000-38000)/10000 = 1.2
+	probability of 1.2 as per z score table = 0.8849
+	p (x < 50000) = 0.8849
+	p (x > 50000) = 1 - 0.8849 = 0.1151
+	
+	No.of Firms with sales > 50000 = 2000 * 0.1151 = 230
+
+(ii) The percentage of firms with sales between Rs. 38,500 and Rs. 41,000
+
+38500 < x < 41000 = p(x < 41000) - p(x < 38500)
+
+z score=(41000 - 38000)/10000 = 3/10=0.3 
+p(x < 41000) = 0.6179
+
+z score = (38500 - 38000)/10000 = 0.05
+
+p( x < 38500)=0.5199
+
+p(x < 41000) - p(x < 38500) = 0.6179 - 0.5199 = 0.098 = 0.98%
+
+
+(iii) The number of firms with sales between Rs. 30,000 and Rs. 50,000
+
+p(3000 < x < 50000) = p(x < 50000) - p(x < 30000)
+
+p(x < 50000) 
+z score = (50000 - 38000)/10000 = 12/10 = 1.2=0.8849
+p(x < 30000)
+z score = (30000 - 38000)/10000 = 8/10 = 0.8=0.7881
+
+
+p(3000 < x < 50000) = p(x < 50000) - p(x < 30000) = 0.8849 - 0.7881 = 0.0968‬ * 2000 = 193.6 ~ 194
+
+
+3. An unbiased die is tossed 700 times. Use normal approximation to binomial to find the probability obtaining:-
+
+(i) more than 124 aces
+
+n=700
+p=1/6
+q=5/6
+
+mu=np = 700*1/6 = 116.6
+std=sqrt npq = 700*1/6*5/6 = 9.85
+
+p(x>124) = p(x > 124.5) = 1- p(x < 124.5)
+p(x<124.5) = p(zscore(x < 124.5)) = p(124.5-116.6/9.85)=0.802=0.7939
+1-p(x<124.5)=1-0.7939=0.2061=20.61%
+
+(ii) number of aces between 81 and 100
+p(81<x<100)=p(x<100) - p(x<81)
+
+p(x<100) = p(100-116.6/9.85)=-1.68=0.465
+p(x<81) = p(81-116.6/9.85) = -3.61= -3.4 - .21 = .0003 + .4168 = 0.4171
+
+p(x<100) - p(x<81) = .0465 - 0.4171 = -0.3716
+
+(iii) exactly 145 aces 
+
+p(x=145) = p(144.5<x<145.5) =
+
+p(x<144.5) = 144.5-116.6/9.85=2.83=.9977
+p(x<145.5)=145.5-116.6/9.85=2.93=.9983
+
+.9983-.9977=.0006=0.006%
+
+
+4. A random variable X follows Poisson distribution with parameter 25. Use normal approximation to Poisson distribution to find the probability that X is greater than or equal to 30.
+
+mu=lamda=25
+std=sqrt lamda=5
+
+p(x>=29.5)=p(z>=(29.5-25)/5)=p(z>=0.9)=1-.8159=.1841
+
+5. A test is conducted which consists of 25 MCQs with every question having 4 options. Determine the probability of a person answering exactly 5 wrong answers.
+
+n=25
+r=5
+n-r=20
+p=probability of 1 wrong answer in each question = 1 - 1/4 = 3/4
+q=1-p = 1/4
+ncr p(power r) q (power n-r) = 25c 5 (3/4)power 5 (1/4)power20
+
+6.In an observational astronomy experiment, let the average rate of photons reaching the telescope is 4 photons per second ( Poisson random variable with mean of 4 ). Find the probability that no photon reaches the telescope in a given second. (Later)
+
+mu=4
+x=4
+e=2.17
+
+p(x=0)=e power -4 = 0.0183
+
+7. The number of calls coming per minute into a Customer support center is Poisson random variable with mean 3.
+
+(a) Find the probability that no calls come in a given 1 minute period.
+
+P(0)=e−3 = 0.0497
+
+(b) Assume that the number of calls arriving in two different minutes are independent. Find the probability that atleast two calls will arrive in a given two minute period.
+
+x = 6
+P(X(2)≥2)=1−P(X(2)<2) = 1- (p(0) + p(1))
+p(0) = 
